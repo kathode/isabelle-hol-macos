@@ -1,1 +1,25 @@
+steps: 
+- script: |
+    wget https://isabelle.in.tum.de/dist/Isabelle2018.dmg
+    hdiutl attach -readwrite Isabelle2018.dmg
+    ln -s /Volumes/Isabelle2018/Isabelle2018.app/Contents/Resources/Isabelle2018/bin/isabelle
+  displayName: "Download and extract Isabelle2018"
+
+- script: |
+    ./isabelle build HOL
+  displayName: "Isabelle2018 build HOL session"
+
+- script: |
+    hdiutil detach Isabelle2018
+
+- task: UniversalPackages@0
+  displayName: "Deploying Universal package"
+  inputs:
+    command: publish
+    publishDirectory: '$(Build.ArtifactStagingDirectory)'
+    vstsFeedPublish: 'isabelle-hol'
+    vstsFeedPackagePublish: 'isabelle-hol-macos'
+    packagePublishDescription: 'Isabelle2018 dmg image for macos with pre-built sessions'
+    versionOption: custom
+    versionPublish: 2018
 
