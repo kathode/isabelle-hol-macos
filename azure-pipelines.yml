@@ -3,6 +3,7 @@ steps:
     wget -nv https://isabelle.in.tum.de/dist/Isabelle2018.dmg
     hdiutil attach Isabelle2018.dmg
     cp -Rf /Volumes/Isabelle/*.app Isabelle2018/ || :
+    rm -rf Isabelle2018/Contents/Java/mmt.jar
     hdiutil detach /Volumes/Isabelle
   displayName: "Download and install Isabelle2018"
 
