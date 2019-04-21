@@ -20,5 +20,5 @@ steps:
     vstsFeedPackagePublish: 'isabelle-hol-macos'
     packagePublishDescription: 'Isabelle2018 dmg image for macos with pre-built sessions'
     versionOption: custom
-    versionPublish: 2018
+    versionPublish: 2018.0.0
 
