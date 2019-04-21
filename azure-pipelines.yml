@@ -1,7 +1,7 @@
 steps: 
 - script: |
     wget -nv https://isabelle.in.tum.de/dist/Isabelle2018.dmg
-    sudo hdiutil attach -readwrite Isabelle2018.dmg
+    sudo hdiutil attach Isabelle2018.dmg
     ln -s /Volumes/Isabelle2018/Isabelle2018.app/Contents/Resources/Isabelle2018/bin/isabelle
   displayName: "Download and extract Isabelle2018"
 
