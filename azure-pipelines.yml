@@ -2,7 +2,7 @@ steps:
 - script: |
     wget -nv https://isabelle.in.tum.de/dist/Isabelle2018.dmg
     hdiutil attach Isabelle2018.dmg
-    cp -rf /Volumes/Isabelle/*.app Isabelle2018/
+    cp -vrf /Volumes/Isabelle/*.app Isabelle2018/
   displayName: "Download and install Isabelle2018"
 
 - script: |
