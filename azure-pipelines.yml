@@ -15,7 +15,7 @@ steps:
   displayName: "Deploying Universal package"
   inputs:
     command: publish
-    publishDirectory: '$(Build.ArtifactStagingDirectory)'
+    publishDirectory: 'Isabelle2018/'
     vstsFeedPublish: 'isabelle-hol'
     vstsFeedPackagePublish: 'isabelle-hol-macos'
     packagePublishDescription: 'Isabelle2018 dmg image for macos with pre-built sessions'
